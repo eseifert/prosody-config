@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Registrieren | trashserver.net</title>
+
+        <link rel="stylesheet" href="https://trashserver.net/register/style.css">
+
+        <script type="text/javascript" language="JavaScript">
+            function checkPw(form) {
+                pw = document.getElementById("pw").value;
+                pw2 = document.getElementById("pw2").value;
+
+                if (pw != pw2) {
+                    alert ("Fehler: Die Passworteingaben stimmen nicht überein. Bitte wiederhole die Eingabe.")
+                    document.getElementById("pw").value = "";
+                    document.getElementById("pw2").value = "";
+                    document.getElementById("pw").focus();
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="centerbox">
+
+                <div class="notice">
+                    {notice}
+                </div>
+
+                <form action="" method="post" onSubmit="return checkPw(this)">
+                    <div class="inputrow"><span class="inputblock">👤</span> <input type="text" name="username" placeholder="Benutzername" required class="inputblock"><span class="inputblock">@{hostname}</span></div>
+                    <div class="inputrow"><span class="inputblock">🔑</span> <input type="password" id="pw" name="password" placeholder="Passwort" required class="inputblock"></div>
+                    <div class="inputrow"><span class="inputblock">🔑</span> <input type="password" id="pw2" name="confirm_password" placeholder="Passwort wiederholen" required class="inputblock"></div>
+
+                    <!-- Captcha -->
+                    {captcha}
+
+                    <p>
+                        <input type="submit" class="submit" value="Registrieren!">
+                    </p>
+                </form>
+
+                <div class="metalinks">
+                    <a href="https://trashserver.net/nutzungsbedingungen/" target="_top">Nutzungsbedingungen</a> | <a href="https://trashserver.net/datenschutz/" target="_top">Datenschutz</a>
+                    <p>
+                        Durch den Klick auf "Registrieren" akzeptierst Du die Nutzungsbedingungen und Datenschutzbestimmungen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

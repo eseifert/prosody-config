@@ -72,7 +72,7 @@ use_libevent = true
 -- Prosody Module
 ---------------------------------
 
-plugin_paths = { "/opt/prosody-modules", "/opt/prosody-modules-git" }
+plugin_paths = { "/opt/prosody-modules" }
 
 -- Aktivierte Module (global, für alle vHosts)
 modules_enabled = {
@@ -125,11 +125,6 @@ modules_enabled = {
 };
 
 
----
---- Low slow events module
-log_slow_events_threshold = 2
-
-
 
 --
 -- Logging (muss hier in Global section stehen!)
@@ -141,20 +136,6 @@ log = {
     -- info = "/var/log/prosody/info.log";
     -- warn = "/var/log/prosody/warn.log";
     error = "/var/log/prosody/error.log";
-}
-
-
-
---
--- Statistiken
-------------------------------------
-
-statistics = "statsd"
-statistics_interval = 30
-
-statistics_config = {
-    statsd_server = "10.8.1.1";
-    statsd_port = 9125;
 }
 
 

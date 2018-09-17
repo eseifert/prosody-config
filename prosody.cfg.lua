@@ -105,7 +105,7 @@ modules_enabled = {
 			"proxy65";
 			"pep";
 			"smacks";
-		    "smacks_offline";
+			"smacks_offline";
 			"carbons";
 			"blocklist";
 			"csi";
@@ -116,14 +116,9 @@ modules_enabled = {
 			"cloud_notify";
 			"compat_dialback";
 			"throttle_presence";
-			"userstats";
 			"log_auth";
-			"block_registrations";
 			"omemo_all_access";
-			"measure_stanza_counts";
-			"measure_client_presence";
 			"register_redirect";
-			"log_slow_events";
 			"http_upload_external";
 			"server_contact_info";
 			"websocket";
